@@ -50,4 +50,19 @@ Use your GitHub username as the username and the token as the password. Never co
 
 ## Publishing
 
-GitHub Actions publishes the package when a GitHub Release is created and published. The workflow uses the repository's `GITHUB_TOKEN` with `packages: write` permission.
+Releases and package publishing are automated with Release Please. The workflow creates a release pull request from Conventional Commits. When that pull request is merged, Release Please updates `package.json`, creates a changelog and GitHub Release, and publishes the package to GitHub Packages.
+
+Use commit messages such as:
+
+```text
+fix: improve international phone number formatting
+feat: add custom link attributes
+```
+
+The usual version levels are:
+
+- `fix:` creates a patch release, for example `0.1.1`
+- `feat:` creates a minor release, for example `0.2.0`
+- `BREAKING CHANGE:` creates a major release, for example `1.0.0`
+
+Do not edit the version manually. Merge the automatically generated release pull request when the changes are ready.
