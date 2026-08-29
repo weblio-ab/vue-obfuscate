@@ -1,14 +1,14 @@
-# @weblio/vue-obfuscate
+# @weblio-ab/vue-obfuscate
 
 Vue 3 components for obfuscating email addresses and phone numbers from simple bots.
 
 ```bash
-pnpm add @weblio/vue-obfuscate
+pnpm add @weblio-ab/vue-obfuscate
 ```
 
 ```vue
 <script setup>
-import { EmailObfuscate, PhoneObfuscate } from '@weblio/vue-obfuscate'
+import { EmailObfuscate, PhoneObfuscate } from '@weblio-ab/vue-obfuscate'
 </script>
 
 <template>
@@ -24,13 +24,13 @@ This package is published to GitHub Packages and requires authentication even th
 Add the following to the consuming project's `.npmrc` file:
 
 ```ini
-@weblio:registry=https://npm.pkg.github.com
+@weblio-ab:registry=https://npm.pkg.github.com
 ```
 
 Create a GitHub Personal Access Token (classic) with the `read:packages` permission, then sign in:
 
 ```bash
-npm login --scope=@weblio --auth-type=legacy --registry=https://npm.pkg.github.com
+npm login --scope=@weblio-ab --auth-type=legacy --registry=https://npm.pkg.github.com
 ```
 
 Use your GitHub username as the username and the token as the password. Never commit the token to a repository.

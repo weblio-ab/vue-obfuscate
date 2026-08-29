@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-          scope: '@weblio'
+          scope: '@weblio-ab'
 
       - name: Set package version from release tag
         run: |

@@ -1,5 +1,5 @@
 {
-  "name": "@weblio/vue-obfuscate",
+  "name": "@weblio-ab/vue-obfuscate",
   "version": "0.1.0",
   "description": "Vue 3 components for obfuscating phone numbers and email addresses from bots.",
   "type": "module",
