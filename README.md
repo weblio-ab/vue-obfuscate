@@ -50,19 +50,12 @@ Use your GitHub username as the username and the token as the password. Never co
 
 ## Publishing
 
-Releases and package publishing are automated with Release Please. The workflow creates a release pull request from Conventional Commits. When that pull request is merged, Release Please updates `package.json`, creates a changelog and GitHub Release, and publishes the package to GitHub Packages.
+Publishing is triggered directly by a published GitHub Release. No release pull request or separate version commit is required.
 
-Use commit messages such as:
+Create a GitHub Release using a semantic-version tag, for example:
 
 ```text
-fix: improve international phone number formatting
-feat: add custom link attributes
+v0.2.0
 ```
 
-The usual version levels are:
-
-- `fix:` creates a patch release, for example `0.1.1`
-- `feat:` creates a minor release, for example `0.2.0`
-- `BREAKING CHANGE:` creates a major release, for example `1.0.0`
-
-Do not edit the version manually. Merge the automatically generated release pull request when the changes are ready.
+The workflow removes the optional `v` prefix, sets the package version to `0.2.0` in the build environment, and publishes the package to GitHub Packages. The `package.json` in the repository is not modified by the workflow.
